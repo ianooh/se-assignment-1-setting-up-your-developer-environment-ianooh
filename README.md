@@ -52,3 +52,78 @@ Submit your document and GitHub repository link through the designated platform 
 - Adherence to submission guidelines and deadlines.
 
 Note: Feel free to reach out for clarification or assistance with any aspect of the assignment.
+
+
+
+
+Developer Environment Setup Documentation
+Overview
+This document outlines the steps I took to set up my developer environment, including
+necessary software installations, configurations, and any customizations applied.
+Troubleshooting steps for the issues I encountered during the setup are also provided.
+My System Specifications
+● Operating System: Windows 10 Pro, Version 20H2
+● Processor: Intel Core i7-9750H
+● RAM: 16GB
+● Storage: 512GB SSD
+Software Installation
+1. Visual Studio Code
+○ Download: Visual Studio Code
+○ Installation: Standard installation with default options.
+○ Extensions Installed:
+○ Python
+○ ESLint
+○ Prettier
+○ Docker
+2. Git
+○ Download: Git for Windows
+○ Installation: Included additional components such as Git Bash, and
+configured Git to use MinTTY as the terminal emulator for Git Bash.
+3. Node.js
+○ Download: Node.js
+○ Version: 14.15.1 LTS
+○ Installation: Used the default installation options.
+4. Docker
+○ Download: Docker Desktop for Windows
+○ Installation: Enabled the WSL 2 based engine and integrated it with
+existing WSL 2 Linux distributions.
+Configuration
+1. Visual Studio Code
+○ Settings Sync: Enabled syncing via GitHub to maintain consistent
+settings across machines.
+○ Custom Settings:
+json
+DownloadCopy code
+1{
+2 "editor.tabSize": 2,
+3 "editor.formatOnSave": true,
+4 "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+5}
+2. Git Configuration
+○ Global Git Ignore:
+○ Created a .gitignore_global file and configured Git to use it.
+○ Command: git config --global core.excludesfile ~/.gitignore_global
+○ User Information:
+○ Set global user name and email.
+○ Commands:
+DownloadCopy code
+1git config --global user.name "Ian Biwot”"
+2git config --global user.email "iankimeli22@gmail.com"
+Customizations
+● Bash Profile Customizations:
+● Added aliases and functions to .bashrc for convenience.
+● Example:
+bash
+DownloadCopy code
+1alias ll='ls -lah'
+Troubleshooting
+1. Node.js Installation Issues
+○ Problem: Node.js commands not recognized in terminal.
+○ Solution: Added Node.js path to system environment variables.
+2. Docker Desktop Errors
+○ Problem: Docker fails to start with errors related to WSL 2.
+○ Solution: Ensured that the WSL 2 feature is enabled in Windows
+Features and updated the Linux kernel package for WSL 2.
+Conclusion
+This document provides a detailed guide on how I set up my developer environment
+tailored for software development using Visual Studio Code, Git, Node.js, and Docker..
